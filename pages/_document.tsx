@@ -5,7 +5,7 @@ export default class Document extends NextDocument {
     return (
       <Html lang="ja">
         <Head />
-        <body>
+        <body className="font-robot">
           <Main />
           <NextScript />
         </body>
