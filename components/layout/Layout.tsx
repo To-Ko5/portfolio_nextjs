@@ -1,10 +1,12 @@
-import { FC } from 'react'
+import React, { FC } from 'react'
+import Header from '../common/Header'
 
 const Layout: FC = ({ children }) => {
   return (
-    <div>
+    <React.Fragment>
+      <Header />
       <main>{children}</main>
-    </div>
+    </React.Fragment>
   )
 }
 
