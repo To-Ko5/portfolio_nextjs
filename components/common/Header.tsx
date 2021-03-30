@@ -1,7 +1,10 @@
+import SwitchingTheme from '../common/SwitchingTheme'
+
 const Header = () => {
   return (
-    <header className="bg-gray-50 dark:bg-gray-900  p-4">
+    <header className="bg-gray-50 dark:bg-dark-black shadow p-4 flex justify-between">
       <h1 className="text-4xl">title</h1>
+      <SwitchingTheme />
     </header>
   )
 }
