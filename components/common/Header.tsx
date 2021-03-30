@@ -1,10 +1,16 @@
+import { VFC } from 'react'
+
 import SwitchingTheme from '../common/SwitchingTheme'
 
-const Header = () => {
+interface HEADER {
+  toggleSidebar: () => void
+}
+
+const Header: VFC<HEADER> = (props) => {
   return (
     <header className="bg-gray-50 dark:bg-dark-black shadow p-4 flex justify-between">
       <div className="flex items-center">
-        <button className="w-8 mr-8">
+        <button className="w-8 mr-8" onClick={() => props.toggleSidebar()}>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
