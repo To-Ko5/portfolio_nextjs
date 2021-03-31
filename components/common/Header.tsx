@@ -8,7 +8,7 @@ interface HEADER {
 
 const Header: VFC<HEADER> = (props) => {
   return (
-    <header className="bg-gray-50 dark:bg-dark-black shadow p-4 flex justify-between">
+    <header className="bg-gray-50 dark:bg-dark-black shadow-md p-4 flex justify-between">
       <div className="flex items-center">
         <button className="w-8 mr-8" onClick={() => props.toggleSidebar()}>
           <svg
@@ -25,7 +25,7 @@ const Header: VFC<HEADER> = (props) => {
             />
           </svg>
         </button>
-        <h1 className="text-4xl font-medium a">C-Portfolio</h1>
+        <p className="text-4xl font-medium a">C-Portfolio</p>
       </div>
 
       <SwitchingTheme />
