@@ -16,5 +16,9 @@ module.exports = {
     }
 
     return config
+  },
+
+  images: {
+    domains: ['images.ctfassets.net'] // 画像のホスティング先のdomainの配列
   }
 }
