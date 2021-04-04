@@ -1,4 +1,4 @@
-import React, { FC, useState, useEffect } from 'react'
+import React, { FC, useState } from 'react'
 
 import Header from '../common/Header'
 import Sidebar from '../common/Sidebar'
@@ -10,12 +10,7 @@ const Layout: FC = ({ children }) => {
 
   const toggleSidebar = () => {
     setIsSidebar(!isSidebar)
-    console.log(isSidebar)
   }
-
-  useEffect(() => {
-    console.log('dd')
-  })
 
   return (
     <React.Fragment>
