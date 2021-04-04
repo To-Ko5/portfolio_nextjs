@@ -6,6 +6,7 @@
     "react-hooks-nesting": false,
     "semicolon": false,
     "trailing-comma": false,
+    "ter-arrow-parens": [true, "always"],
     "function-name": [
       true,
       {
