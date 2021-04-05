@@ -7,7 +7,7 @@ const ReturnTopButton = () => {
   }
   return (
     <button
-      className="fixed  bottom-3.5 right-3.5 w-14 h-14 focus:outline-none  p-2 text-center rounded-full bg-gray-50 dark:bg-dark-black shadow-lg outline-none border-0"
+      className="fixed bottom-3.5 right-3.5 w-14 h-14 focus:outline-none  p-2 text-center rounded-full bg-gray-50 dark:bg-dark-black shadow-lg outline-none border-0"
       onClick={returnTop}
     >
       <span>
