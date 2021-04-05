@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import Link from 'next/link'
 
 import {
   PostImage,
@@ -100,10 +101,12 @@ const PostCard = ({ id, post }) => {
           </button>
         </div>
 
-        <div className="absolute  bottom-3.5 right-3.5">
-          <button className="border border-blue-400 rounded p-1 text-blue-400">
-            READ MORE
-          </button>
+        <div className="absolute bottom-3.5 right-3.5">
+          <Link href={`work/${id}`}>
+            <a className="border border-blue-400 rounded p-1 text-blue-400">
+              READ MORE
+            </a>
+          </Link>
         </div>
       </div>
     </div>
