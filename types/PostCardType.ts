@@ -12,11 +12,11 @@ export interface PostArticle {
 }
 
 export interface PostCategory {
-  id: number
+  id: string
   name: string
 }
 
 export interface PostTags {
-  id: number
+  id: string
   name: string
 }
