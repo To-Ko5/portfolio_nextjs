@@ -1,4 +1,4 @@
-import { createClient } from '../library/contentful'
+import { createClient } from '../../library/contentful'
 
 const client = createClient()
 
