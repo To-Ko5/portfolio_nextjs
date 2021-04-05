@@ -6,7 +6,7 @@ import {
   PostArticle,
   PostCategory,
   PostTags
-} from '../../types/PostType'
+} from '../../types/PostCardType'
 
 const PostCard = ({ id, post }) => {
   const image: PostImage = {
@@ -51,7 +51,7 @@ const PostCard = ({ id, post }) => {
           <span className="text-xs border border-gray-400 rounded p-1 text-gray-400">
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              className="h-5 w-5 inline"
+              className="4-5 w-4 inline"
               viewBox="0 0 20 20"
               fill="currentColor"
             >
@@ -71,7 +71,7 @@ const PostCard = ({ id, post }) => {
           <span className="text-xs border border-gray-400 rounded p-1 text-gray-400">
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              className="h-5 w-5 inline"
+              className="h-4 w-4 inline"
               viewBox="0 0 20 20"
               fill="currentColor"
             >
@@ -86,7 +86,7 @@ const PostCard = ({ id, post }) => {
           <button className="p-1 px-3 ml-4 dark:bg-dark-black rounded shadow">
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              className="h-5 w-5 inline"
+              className="h-4 w-4 inline"
               fill="none"
               viewBox="0 0 24 24"
               stroke="currentColor"
