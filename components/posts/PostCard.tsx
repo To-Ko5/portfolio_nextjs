@@ -1,6 +1,8 @@
+import { VFC } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 
+import { PostFields } from '../../types/PostFieldsType'
 import {
   PostImage,
   PostArticle,
@@ -8,7 +10,12 @@ import {
   PostTags
 } from '../../types/PostCardType'
 
-const PostCard = ({ id, post }) => {
+interface Props {
+  id: number
+  post: PostFields
+}
+
+const PostCard: VFC<Props> = ({ id, post }) => {
   const image: PostImage = {
     src: `https:${post.image.fields.file.url}`,
     alt: post.image.fields.title,
