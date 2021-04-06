@@ -3,6 +3,7 @@ import { GetStaticPaths, GetStaticProps } from 'next'
 
 import Layout from '../../components/layout/Layout'
 import Seo from '../../components/layout/Seo'
+import PostDetailsImage from '../../components/posts/details/PostDetailsImage'
 
 import { getAllPostSIds } from '../../hooks/posts/getAllPostsIds'
 import { getPostDetails } from '../../hooks/posts/getPostDetails'
@@ -17,7 +18,9 @@ const Work: VFC<Props> = ({ post }) => {
   return (
     <Layout>
       <Seo />
-      <div className="max-w-screen-lg mx-auto ">{post.title}</div>
+      <div className="max-w-screen-lg mx-auto px-4">
+        <PostDetailsImage image={post.image} />
+      </div>
     </Layout>
   )
 }
