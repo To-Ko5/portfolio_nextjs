@@ -6,6 +6,7 @@ import Seo from '../../components/layout/Seo'
 
 import { getAllPostSIds } from '../../hooks/posts/getAllPostsIds'
 import { getPostDetails } from '../../hooks/posts/getPostDetails'
+import { PostFields } from '../../types/PostFieldsType'
 import { PostDetails } from '../../types/PostDetailsType'
 
 interface Props {
@@ -32,21 +33,22 @@ export const getStaticPaths: GetStaticPaths = async () => {
 }
 
 export const getStaticProps: GetStaticProps = async (ctx) => {
-  const response = await getPostDetails(ctx.params.id)
+  const response: any = await getPostDetails(ctx.params.id)
+  const fields = response.fields as PostFields
   const post = {
-    title: response.fields.title,
-    subTitle: response.fields.title,
+    title: fields.title,
+    subTitle: fields.title,
     category: {
-      id: response.fields.category.sys.id,
-      name: response.fields.category.fields.name
+      id: fields.category.sys.id,
+      name: fields.category.fields.name
     },
-    tag: response.fields.tag,
-    content: response.fields.content,
+    tag: fields.tag,
+    content: fields.content,
     image: {
-      src: `https:${response.fields.image.fields.file.url}`,
-      alt: response.fields.image.fields.title,
-      width: response.fields.image.fields.file.details.image.width,
-      height: response.fields.image.fields.file.details.image.height
+      src: `https:${fields.image.fields.file.url}`,
+      alt: fields.image.fields.title,
+      width: fields.image.fields.file.details.image.width,
+      height: fields.image.fields.file.details.image.height
     }
   }
   return {
