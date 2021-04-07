@@ -6,6 +6,7 @@ import Seo from '../../components/layout/Seo'
 import PostDetailsImage from '../../components/posts/details/PostDetailsImage'
 import PostDetailsTitle from '../../components/posts/details/PostDetailsTitle'
 import PostDetailsCategory from '../../components/posts/details/PostDetailsCategory'
+import PostDetailsTags from '../../components/posts/details/PostDetailsTags'
 
 import { getAllPostSIds } from '../../hooks/posts/getAllPostsIds'
 import { getPostDetails } from '../../hooks/posts/getPostDetails'
@@ -24,6 +25,7 @@ const Work: VFC<Props> = ({ post }) => {
         <PostDetailsImage image={post.image} />
         <PostDetailsTitle title={post.title} subTitle={post.subTitle} />
         <PostDetailsCategory category={post.category} />
+        <PostDetailsTags tags={post.tags} />
       </div>
     </Layout>
   )
@@ -42,6 +44,12 @@ export const getStaticPaths: GetStaticPaths = async () => {
 export const getStaticProps: GetStaticProps = async (ctx) => {
   const response: any = await getPostDetails(ctx.params.id)
   const fields = response.fields as PostFields
+
+  // tagは複数あることもあるので展開
+  const tags = fields.tag.map((e) => {
+    return { id: e.sys.id, name: e.fields.name }
+  })
+
   const post = {
     title: fields.title,
     subTitle: fields.subtitle,
@@ -49,7 +57,7 @@ export const getStaticProps: GetStaticProps = async (ctx) => {
       id: fields.category.sys.id,
       name: fields.category.fields.name
     },
-    tag: fields.tag,
+    tags: tags,
     content: fields.content,
     image: {
       src: `https:${fields.image.fields.file.url}`,
