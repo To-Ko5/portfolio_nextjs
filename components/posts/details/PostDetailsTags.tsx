@@ -3,7 +3,6 @@ import Link from 'next/link'
 import { PostDetails } from '../../../types/PostDetailsType'
 
 const PostDetailsTags: VFC<Pick<PostDetails, 'tags'>> = ({ tags }) => {
-  console.log(tags)
   return (
     <div className="flex mb-4">
       <Link href="">
