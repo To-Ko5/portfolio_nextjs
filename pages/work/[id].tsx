@@ -52,7 +52,8 @@ export const getStaticProps: GetStaticProps = async (ctx) => {
       alt: fields.image.fields.title,
       width: fields.image.fields.file.details.image.width,
       height: fields.image.fields.file.details.image.height
-    }
+    },
+    url: fields.url
   }
   return {
     props: {

@@ -7,6 +7,7 @@ export interface PostDetails {
   }
   tag: []
   content: string
+  url?: string
   image: {
     src: string
     alt: string

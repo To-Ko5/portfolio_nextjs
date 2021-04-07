@@ -42,4 +42,5 @@ export interface PostFields {
       }
     }
   }
+  url?: string
 }
