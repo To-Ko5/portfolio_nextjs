@@ -25,7 +25,7 @@ const PostDetailsTags: VFC<Pick<PostDetails, 'tags'>> = ({ tags }) => {
       <div className="flex">
         {tags &&
           tags.map((tag) => (
-            <div>
+            <div key={tag.id}>
               <Link href="">
                 <a className="px-2 py-1 mr-1  dark:bg-dark-black rounded shadow text-sm">
                   # {tag.name}
