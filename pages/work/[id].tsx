@@ -4,6 +4,7 @@ import { GetStaticPaths, GetStaticProps } from 'next'
 import Layout from '../../components/layout/Layout'
 import Seo from '../../components/layout/Seo'
 import PostDetailsImage from '../../components/posts/details/PostDetailsImage'
+import PostDetailsTitle from '../../components/posts/details/PostDetailsTitle'
 
 import { getAllPostSIds } from '../../hooks/posts/getAllPostsIds'
 import { getPostDetails } from '../../hooks/posts/getPostDetails'
@@ -20,6 +21,7 @@ const Work: VFC<Props> = ({ post }) => {
       <Seo />
       <div className="max-w-screen-lg mx-auto px-4">
         <PostDetailsImage image={post.image} />
+        <PostDetailsTitle title={post.title} subTitle={post.subTitle} />
       </div>
     </Layout>
   )
@@ -40,7 +42,7 @@ export const getStaticProps: GetStaticProps = async (ctx) => {
   const fields = response.fields as PostFields
   const post = {
     title: fields.title,
-    subTitle: fields.title,
+    subTitle: fields.subtitle,
     category: {
       id: fields.category.sys.id,
       name: fields.category.fields.name
@@ -53,7 +55,7 @@ export const getStaticProps: GetStaticProps = async (ctx) => {
       width: fields.image.fields.file.details.image.width,
       height: fields.image.fields.file.details.image.height
     },
-    url: fields.url
+    url: fields.url ? fields.url : ''
   }
   return {
     props: {
