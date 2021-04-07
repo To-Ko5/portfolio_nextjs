@@ -5,7 +5,12 @@ export interface PostDetails {
     id: string
     name: string
   }
-  tag: []
+  tags: [
+    {
+      id: string
+      name: string
+    }
+  ]
   content: string
   url?: string
   image: {
