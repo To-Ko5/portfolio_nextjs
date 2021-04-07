@@ -7,6 +7,7 @@
     "semicolon": false,
     "trailing-comma": false,
     "ter-arrow-parens": [true, "always"],
+    "object-literal-shorthand": false,
     "function-name": [
       true,
       {
