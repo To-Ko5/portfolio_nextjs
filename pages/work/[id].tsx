@@ -7,6 +7,9 @@ import PostDetailsImage from '../../components/posts/details/PostDetailsImage'
 import PostDetailsTitle from '../../components/posts/details/PostDetailsTitle'
 import PostDetailsCategory from '../../components/posts/details/PostDetailsCategory'
 import PostDetailsTags from '../../components/posts/details/PostDetailsTags'
+import PostDetailsContent from '../../components/posts/details/PostDetailsContent'
+import PostDetailsLink from '../../components/posts/details/PostDetailsLink'
+import Button from '../../components/common/BackToTopPageButton'
 
 import { getAllPostSIds } from '../../hooks/posts/getAllPostsIds'
 import { getPostDetails } from '../../hooks/posts/getPostDetails'
@@ -26,6 +29,9 @@ const Work: VFC<Props> = ({ post }) => {
         <PostDetailsTitle title={post.title} subTitle={post.subTitle} />
         <PostDetailsCategory category={post.category} />
         <PostDetailsTags tags={post.tags} />
+        <PostDetailsContent content={post.content} />
+        {post.url && <PostDetailsLink url={post.url} />}
+        <Button />
       </div>
     </Layout>
   )
@@ -45,7 +51,7 @@ export const getStaticProps: GetStaticProps = async (ctx) => {
   const response: any = await getPostDetails(ctx.params.id)
   const fields = response.fields as PostFields
 
-  // tagは複数あることもあるので展開
+  // tagは複数あることもあるので展開する
   const tags = fields.tag.map((e) => {
     return { id: e.sys.id, name: e.fields.name }
   })
