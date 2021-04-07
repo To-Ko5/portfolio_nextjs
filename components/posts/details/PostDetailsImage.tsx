@@ -4,7 +4,7 @@ import { PostDetails } from '../../../types/PostDetailsType'
 
 const PostDetailsImage: VFC<Pick<PostDetails, 'image'>> = ({ image }) => {
   return (
-    <div>
+    <div className="mb-4">
       <Image
         src={image.src}
         alt={image.alt}
