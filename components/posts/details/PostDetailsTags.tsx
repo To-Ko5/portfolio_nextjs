@@ -5,7 +5,7 @@ import { PostDetails } from '../../../types/PostDetailsType'
 const PostDetailsTags: VFC<Pick<PostDetails, 'tags'>> = ({ tags }) => {
   return (
     <div className="flex mb-8">
-      <Link href="">
+      <Link href="/tag">
         <a className="flex items-center mr-4 px-1 text-xs border border-gray-400 rounded  text-gray-400">
           <svg
             xmlns="http://www.w3.org/2000/svg"

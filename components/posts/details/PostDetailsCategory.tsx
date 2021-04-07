@@ -7,7 +7,7 @@ const PostDetailsCategory: VFC<Pick<PostDetails, 'category'>> = ({
 }) => {
   return (
     <div className="flex mb-4">
-      <Link href="">
+      <Link href="/category">
         <a className="flex items-center mr-4 px-1 text-xs border border-gray-400 rounded text-gray-400">
           <svg
             xmlns="http://www.w3.org/2000/svg"
