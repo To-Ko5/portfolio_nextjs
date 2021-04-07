@@ -56,7 +56,7 @@ const PostCard: VFC<Props> = ({ id, post }) => {
         <p className="mb-5 text-sm">{article.subTitle}</p>
         <div className="mb-5">
           <div className="flex mb-4">
-            <Link href="">
+            <Link href="/category">
               <a className="flex items-center px-1 text-xs border border-gray-400 rounded  text-gray-400">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -84,7 +84,7 @@ const PostCard: VFC<Props> = ({ id, post }) => {
         </div>
         <div>
           <div className="flex mb-4">
-            <Link href="">
+            <Link href="/tag">
               <a className="flex items-center px-1 text-xs border border-gray-400 rounded  text-gray-400">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
