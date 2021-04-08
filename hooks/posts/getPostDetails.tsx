@@ -9,11 +9,14 @@ export const getPostDetails = async (params) => {
         content_type: 'work',
         'sys.id': params
       })
-      .catch((error: string) => {
-        throw new Error(error)
-      })
+      .catch((error) => error)
+
+    if (response.sys.type === 'Error') {
+      throw new Error(response.message)
+    }
+
     return response.items[0]
   } catch (error) {
-    throw new Error(error)
+    console.error(error)
   }
 }

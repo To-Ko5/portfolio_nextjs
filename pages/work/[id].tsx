@@ -49,6 +49,13 @@ export const getStaticPaths: GetStaticPaths = async () => {
 
 export const getStaticProps: GetStaticProps = async (ctx) => {
   const response: any = await getPostDetails(ctx.params.id)
+
+  if (!response) {
+    return {
+      notFound: true
+    }
+  }
+
   const fields = response.fields as PostFields
 
   // tagは複数あることもあるので展開する

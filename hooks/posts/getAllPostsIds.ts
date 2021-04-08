@@ -1,3 +1,4 @@
+import { error } from 'node:console'
 import { createClient } from '../../library/contentful'
 
 const client = createClient()
@@ -9,9 +10,11 @@ export const getAllPostSIds = async () => {
         content_type: 'work',
         order: '-sys.createdAt'
       })
-      .catch((error: string) => {
-        throw new Error(error)
-      })
+      .catch((error) => error)
+
+    if (response.sys.type === 'Error') {
+      throw new Error(response.message)
+    }
 
     return response.items.map((post) => {
       return {
@@ -21,6 +24,6 @@ export const getAllPostSIds = async () => {
       }
     })
   } catch (error) {
-    throw new Error(error)
+    console.error(error)
   }
 }
