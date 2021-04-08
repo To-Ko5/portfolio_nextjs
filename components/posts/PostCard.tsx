@@ -8,7 +8,7 @@ import {
   PostArticle,
   PostCategory,
   PostTags
-} from '../../types/PostCardType'
+} from '../../types/PostType'
 
 interface Props {
   id: number
