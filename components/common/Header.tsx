@@ -25,7 +25,7 @@ const Header: VFC<HEADER> = (props) => {
             />
           </svg>
         </button>
-        <p className="text-4xl font-medium a">C-Portfolio</p>
+        <p className="text-4xl font-medium">C-Portfolio</p>
       </div>
 
       <SwitchingTheme />
