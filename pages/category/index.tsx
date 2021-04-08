@@ -38,6 +38,12 @@ export default categoryIndex
 export const getStaticProps: GetStaticProps = async () => {
   const categories = await getAllCategory()
 
+  if (!categories) {
+    return {
+      notFound: true
+    }
+  }
+
   return {
     props: {
       categories
