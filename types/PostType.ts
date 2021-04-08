@@ -16,7 +16,7 @@ export interface PostCategory {
   name: string
 }
 
-export interface PostTags {
+export interface PostTag {
   id: string
   name: string
 }

@@ -7,7 +7,7 @@ import {
   PostImage,
   PostArticle,
   PostCategory,
-  PostTags
+  PostTag
 } from '../../types/PostType'
 
 interface Props {
@@ -33,7 +33,7 @@ const PostCard: VFC<Props> = ({ id, post }) => {
     name: post.category.fields.name
   }
 
-  const tags: PostTags[] = []
+  const tags: PostTag[] = []
   post.tag.map((e) => {
     tags.push({ id: e.sys.id, name: e.fields.name })
   })
