@@ -6,7 +6,8 @@ export const getAllCategory = async () => {
   try {
     const response = await client
       .getEntries({
-        content_type: 'category'
+        content_type: 'category',
+        order: '-sys.id'
       })
       .catch((error) => error)
 
