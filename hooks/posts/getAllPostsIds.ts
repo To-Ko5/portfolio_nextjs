@@ -2,7 +2,7 @@ import { createClient } from '../../library/contentful'
 
 const client = createClient()
 
-export const getAllPostSIds = async () => {
+export const getAllPostsIds = async () => {
   try {
     const response = await client
       .getEntries({

@@ -11,7 +11,7 @@ import PostDetailsContent from '../../components/posts/details/PostDetailsConten
 import PostDetailsLink from '../../components/posts/details/PostDetailsLink'
 import Button from '../../components/common/BackToTopPageButton'
 
-import { getAllPostSIds } from '../../hooks/posts/getAllPostsIds'
+import { getAllPostsIds } from '../../hooks/posts/getAllPostsIds'
 import { getPostDetails } from '../../hooks/posts/getPostDetails'
 import { PostFields } from '../../types/PostFieldsType'
 import { PostDetails } from '../../types/PostDetailsType'
@@ -40,7 +40,7 @@ const Work: VFC<Props> = ({ post }) => {
 export default Work
 
 export const getStaticPaths: GetStaticPaths = async () => {
-  const paths = await getAllPostSIds()
+  const paths = await getAllPostsIds()
   return {
     paths,
     fallback: false
