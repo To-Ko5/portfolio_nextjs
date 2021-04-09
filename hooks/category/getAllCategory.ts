@@ -21,6 +21,7 @@ export const getAllCategory = async () => {
         name: e.fields.name
       }
     })
+
     return categories
   } catch (error) {
     console.error(error)

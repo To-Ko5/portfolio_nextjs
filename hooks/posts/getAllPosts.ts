@@ -10,9 +10,11 @@ export const getAllPosts = async () => {
         order: '-sys.createdAt'
       })
       .catch((error) => error)
+
     if (response.sys.type === 'Error') {
       throw new Error(response.message)
     }
+
     return response
   } catch (error) {
     console.error(error)
