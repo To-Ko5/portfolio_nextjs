@@ -3,6 +3,7 @@ import { GetStaticPaths, GetStaticProps } from 'next'
 import Layout from '../../components/layout/Layout'
 import Seo from '../../components/layout/Seo'
 import PostCard from '../../components/posts/PostCard'
+import Button from '../../components/common/BackToTopPageButton'
 
 import { getAllCategoryIds } from '../../hooks/category/getAllCategoryIds'
 import { getCategoryPosts } from '../../hooks/category/getCategoryPosts'
@@ -12,7 +13,6 @@ const Category = ({ posts }) => {
 
   // titleを取得
   const categoryTitle = postData.map((post, index) => {
-    console.log(index)
     if (index === 0) {
       return post.fields.category.fields.name
     }
@@ -31,6 +31,7 @@ const Category = ({ posts }) => {
               <PostCard id={post.sys.id} key={post.sys.id} post={post.fields} />
             ))}
         </div>
+        <Button />
       </div>
     </Layout>
   )
