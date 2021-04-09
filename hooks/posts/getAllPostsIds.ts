@@ -1,4 +1,3 @@
-import { error } from 'node:console'
 import { createClient } from '../../library/contentful'
 
 const client = createClient()
