@@ -1,0 +1,9 @@
+/* next/imageのstyle */
+
+.image {
+  height: 200px;
+}
+
+.image > div {
+  height: 100%;
+}
