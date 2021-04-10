@@ -21,11 +21,11 @@ const Category = ({ posts }) => {
   return (
     <Layout>
       <Seo />
-      <div className="max-w-screen-lg mx-auto">
+      <div className="max-w-screen-lg mx-auto px-4">
         <h1 className="text-3xl font-medium text-center mb-8">
           {categoryTitle}
         </h1>
-        <div className="grid grid-cols-3 gap-4">
+        <div className="grid gap-4 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
           {postData &&
             postData.map((post) => (
               <PostCard id={post.sys.id} key={post.sys.id} post={post.fields} />
