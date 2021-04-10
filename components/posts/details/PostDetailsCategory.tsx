@@ -25,7 +25,7 @@ const PostDetailsCategory: VFC<Pick<PostDetails, 'category'>> = ({
         </a>
       </Link>
       <div>
-        <Link href="">
+        <Link href={`/category/${category.id}`}>
           <a className="px-2 py-1 dark:bg-dark-black rounded shadow text-sm">
             {category.name}
           </a>
