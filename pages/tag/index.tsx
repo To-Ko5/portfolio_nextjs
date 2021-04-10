@@ -34,7 +34,6 @@ export default tagIndex
 export const getStaticProps: GetStaticProps = async () => {
   const tags = await getAllTag()
 
-  console.log(tags)
   if (!tags) {
     return {
       notFound: true
