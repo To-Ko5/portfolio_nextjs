@@ -10,8 +10,8 @@ const Home = ({ posts }) => {
   return (
     <Layout>
       <Seo />
-      <div className="max-w-screen-lg mx-auto">
-        <div className="grid grid-cols-3 gap-4">
+      <div className="max-w-screen-lg mx-auto px-4">
+        <div className="grid gap-4 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
           {postData &&
             postData.map((post) => (
               <PostCard id={post.sys.id} key={post.sys.id} post={post.fields} />

@@ -16,7 +16,7 @@ const Layout: FC = ({ children }) => {
     <React.Fragment>
       <Header toggleSidebar={() => toggleSidebar()} />
       {isSidebar && <Sidebar />}
-      <main className="pt-28 min-h-screen">{children}</main>
+      <main className="py-28 min-h-screen">{children}</main>
       <ReturnTopButton />
       <Footer />
     </React.Fragment>
