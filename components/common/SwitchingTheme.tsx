@@ -14,11 +14,15 @@ const SwitchingTheme = () => {
   }
 
   return (
-    <div className="w-8 cursor-pointer" onClick={switchingTheme}>
+    <button
+      className="p-1 rounded-full focus:outline-none focus:ring-2 focus:ring-deep-blue"
+      onClick={switchingTheme}
+    >
       {isDarkTheme ? (
         <span>
           <svg
             xmlns="http://www.w3.org/2000/svg"
+            className="w-8"
             fill="none"
             viewBox="0 0 24 24"
             stroke="currentColor"
@@ -35,6 +39,7 @@ const SwitchingTheme = () => {
         <span>
           <svg
             xmlns="http://www.w3.org/2000/svg"
+            className="w-8"
             fill="none"
             viewBox="0 0 24 24"
             stroke="currentColor"
@@ -48,7 +53,7 @@ const SwitchingTheme = () => {
           </svg>
         </span>
       )}
-    </div>
+    </button>
   )
 }
 
