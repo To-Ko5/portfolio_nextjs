@@ -1,5 +1,7 @@
 import { VFC } from 'react'
 
+import NavigationList from './NavigationLists'
+
 interface Sidebar {
   isSidebar: boolean
 }
@@ -12,11 +14,13 @@ const Sidebar: VFC<Sidebar> = ({ isSidebar }) => {
   }
 
   return (
-    <div>
-      <div
-        className="fixed z-50 top-0 h-full w-30 w-1/5 bg-gray-50 dark:bg-dark-black shadow-md transition-transform"
-        style={sidebarStyle()}
-      ></div>
+    <div
+      className="fixed z-50 top-0 h-full w-64 bg-gray-50 dark:bg-dark-black shadow-md border-r border-gray-400 border-opacity-20 transition-transform"
+      style={sidebarStyle()}
+    >
+      <aside className="p-2">
+        <NavigationList />
+      </aside>
     </div>
   )
 }
