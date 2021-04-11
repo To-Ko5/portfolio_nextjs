@@ -1,5 +1,6 @@
 import { VFC } from 'react'
 
+import SearchForm from '../../search/SearchForm'
 import NavigationList from './NavigationLists'
 
 interface Sidebar {
@@ -19,6 +20,9 @@ const Sidebar: VFC<Sidebar> = ({ isSidebar }) => {
       style={sidebarStyle()}
     >
       <aside className="p-2">
+        <div className="mb-4 sm:hidden">
+          <SearchForm />
+        </div>
         <NavigationList />
       </aside>
     </div>

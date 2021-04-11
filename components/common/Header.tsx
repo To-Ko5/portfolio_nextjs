@@ -1,5 +1,6 @@
 import { VFC } from 'react'
 
+import SearchForm from '../search/SearchForm'
 import SwitchingTheme from '../common/SwitchingTheme'
 
 interface HEADER {
@@ -27,8 +28,12 @@ const Header: VFC<HEADER> = ({ toggleSidebar }) => {
         </button>
         <p className="text-4xl font-medium">C-Portfolio</p>
       </div>
-
-      <SwitchingTheme />
+      <div className="flex items-center">
+        <div className="mr-10 hidden sm:block">
+          <SearchForm />
+        </div>
+        <SwitchingTheme />
+      </div>
     </header>
   )
 }
