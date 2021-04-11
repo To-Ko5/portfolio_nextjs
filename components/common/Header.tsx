@@ -6,11 +6,11 @@ interface HEADER {
   toggleSidebar: () => void
 }
 
-const Header: VFC<HEADER> = (props) => {
+const Header: VFC<HEADER> = ({ toggleSidebar }) => {
   return (
     <header className="fixed w-full z-10 bg-gray-50 dark:bg-dark-black shadow-md p-4 flex justify-between">
       <div className="flex items-center">
-        <button className="w-8 mr-8" onClick={() => props.toggleSidebar()}>
+        <button className="w-8 mr-8" onClick={toggleSidebar}>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
