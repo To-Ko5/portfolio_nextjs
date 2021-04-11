@@ -3,7 +3,7 @@ import { GetStaticPaths, GetStaticProps } from 'next'
 import Layout from '../../components/layout/Layout'
 import Seo from '../../components/layout/Seo'
 import PostCard from '../../components/posts/PostCard'
-import Button from '../../components/common/BackToTopPageButton'
+import Button from '../../components/common/buttons/BackToTopPageButton'
 
 import { getAllCategoryIds } from '../../hooks/category/getAllCategoryIds'
 import { getCategoryPosts } from '../../hooks/category/getCategoryPosts'

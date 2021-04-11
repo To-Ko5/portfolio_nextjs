@@ -4,7 +4,7 @@ import { useRouter } from 'next/router'
 import Layout from '../../components/layout/Layout'
 import Seo from '../../components/layout/Seo'
 import PostCard from '../../components/posts/PostCard'
-import Button from '../../components/common/BackToTopPageButton'
+import Button from '../../components/common/buttons/BackToTopPageButton'
 
 import { getAllTagIds } from '../../hooks/tag/getAllTagIds'
 import { getTagPosts } from '../../hooks/tag/getTagPosts'

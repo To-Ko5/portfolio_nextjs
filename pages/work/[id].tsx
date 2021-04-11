@@ -9,7 +9,7 @@ import PostDetailsCategory from '../../components/posts/details/PostDetailsCateg
 import PostDetailsTags from '../../components/posts/details/PostDetailsTags'
 import PostDetailsContent from '../../components/posts/details/PostDetailsContent'
 import PostDetailsLink from '../../components/posts/details/PostDetailsLink'
-import Button from '../../components/common/BackToTopPageButton'
+import Button from '../../components/common/buttons/BackToTopPageButton'
 
 import { getAllPostsIds } from '../../hooks/posts/getAllPostsIds'
 import { getPostDetails } from '../../hooks/posts/getPostDetails'
