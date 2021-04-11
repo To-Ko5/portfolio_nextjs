@@ -9,6 +9,7 @@
     "tslint": "tslint -p . -c tslint.json"
   },
   "dependencies": {
+    "@tailwindcss/forms": "^0.3.2",
     "autoprefixer": "^10.2.5",
     "contentful": "^8.2.1",
     "next": "10.0.9",
