@@ -20,6 +20,7 @@ const SearchKeywords = ({ posts, title }) => {
             postData.map((post) => (
               <PostCard id={post.sys.id} key={post.sys.id} post={post.fields} />
             ))}
+          {!postData.length && <p>一致する情報は見つかりませんでした。</p>}
         </div>
         <Button />
       </div>
