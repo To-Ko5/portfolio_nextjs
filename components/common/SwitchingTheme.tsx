@@ -1,9 +1,9 @@
-import { useState } from 'react'
+import { useState, MouseEvent } from 'react'
 
 const SwitchingTheme = () => {
   const [isDarkTheme, setIsDarkTheme] = useState(false)
 
-  const switchingTheme = () => {
+  const switchingTheme = (e: MouseEvent<HTMLButtonElement>) => {
     const element = document.querySelector('html')
     if (element.classList.value === 'dark') {
       document.querySelector('html').classList.remove('dark')
@@ -11,11 +11,12 @@ const SwitchingTheme = () => {
       document.querySelector('html').classList.add('dark')
     }
     setIsDarkTheme(!isDarkTheme)
+    e.currentTarget.blur()
   }
 
   return (
     <button
-      className="p-1 rounded-full focus:outline-none focus:ring-2 focus:ring-deep-blue"
+      className="p-1 rounded-full focus:outline-none focus:ring-2 focus:ring-deep-blue hover:bg-opacity-20 hover:bg-gray-400 transition-colors"
       onClick={switchingTheme}
     >
       {isDarkTheme ? (
