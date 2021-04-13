@@ -11,7 +11,14 @@ const SearchForm = () => {
 
   const search = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault()
+    if (!keywords.trim()) {
+      return
+    }
     router.push(`/search/${keywords}`)
+    const searchButton = document.getElementById('search_button')
+    const searchInput = document.getElementById('search_keywords')
+    searchButton.blur()
+    searchInput.blur()
   }
 
   return (
@@ -25,7 +32,10 @@ const SearchForm = () => {
         onChange={changeKeywords}
         className="focus:ring-deep-blue focus:border-deep-blue w-full shadow-sm sm:text-sm border-gray-400 dark:bg-dark-black rounded mr-2"
       ></input>
-      <button className="p-1 rounded-full focus:outline-none focus:ring-2 focus:ring-deep-blue">
+      <button
+        id="search_button"
+        className="p-1 rounded-full focus:outline-none focus:ring-2 focus:ring-deep-blue"
+      >
         <svg
           xmlns="http://www.w3.org/2000/svg"
           className="w-6 sm:w-8"
