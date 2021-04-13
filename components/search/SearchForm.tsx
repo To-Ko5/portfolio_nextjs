@@ -1,10 +1,28 @@
+import { useRouter } from 'next/router'
+import { useState, FormEvent, ChangeEvent } from 'react'
+
 const SearchForm = () => {
+  const router = useRouter()
+  const [keywords, setKeywords] = useState('')
+
+  const changeKeywords = (e: ChangeEvent<HTMLInputElement>) => {
+    setKeywords(e.target.value)
+  }
+
+  const search = (e: FormEvent<HTMLFormElement>) => {
+    e.preventDefault()
+    router.push(`/search/${keywords}`)
+  }
+
   return (
-    <form className="flex items-center">
+    <form className="flex items-center" onSubmit={search}>
       <input
         type="text"
         name="search_keywords"
         id="search_keywords"
+        placeholder="Search"
+        value={keywords}
+        onChange={changeKeywords}
         className="focus:ring-deep-blue focus:border-deep-blue w-full shadow-sm sm:text-sm border-gray-400 dark:bg-dark-black rounded mr-2"
       ></input>
       <button className="p-1 rounded-full focus:outline-none focus:ring-2 focus:ring-deep-blue">
