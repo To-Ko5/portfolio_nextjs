@@ -14,7 +14,7 @@ export const getProfile = async () => {
       throw new Error(response.message)
     }
 
-    return response.items
+    return response.items[0]
   } catch (error) {
     console.error(error)
   }
