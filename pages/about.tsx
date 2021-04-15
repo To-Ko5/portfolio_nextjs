@@ -4,6 +4,9 @@ import { GetStaticProps } from 'next'
 import Layout from '../components/layout/Layout'
 import Seo from '../components/layout/Seo'
 import ProfileImage from '../components/about/ProfileImage'
+import ProfileTitle from '../components/about/ProfileTitle'
+import ProfileSnsLinks from '../components/about/ProfileSnsLinks'
+import ProfileSkills from '../components/about/ProfileSkills'
 
 import { getProfile } from '../hooks/about/getProfile'
 import { Profile } from '../types/ProfileType'
@@ -16,8 +19,16 @@ const About: VFC<Props> = ({ profile }) => {
   return (
     <Layout>
       <Seo />
-      <div className="max-w-screen-lg mx-auto px-4">
+      <div className="max-w-2xl mx-auto px-4">
         <ProfileImage image={profile.image} />
+        <ProfileTitle name={profile.name} job={profile.job} />
+        <ProfileSnsLinks
+          twitter={profile.twitter}
+          qiita={profile.qiita}
+          github={profile.github}
+          instagram={profile.instagram}
+        />
+        <ProfileSkills skills={profile.skills} />
       </div>
     </Layout>
   )
