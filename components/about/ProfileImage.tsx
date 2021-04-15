@@ -5,7 +5,7 @@ import { Profile } from '../../types/ProfileType'
 
 const ProfileImage: VFC<Pick<Profile, 'image'>> = ({ image }) => {
   return (
-    <div className="mb-4 max-h-96">
+    <div className="mb-4">
       <Image
         src={image.src}
         alt={image.alt}
