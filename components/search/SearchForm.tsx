@@ -34,7 +34,7 @@ const SearchForm = () => {
       ></input>
       <button
         id="search_button"
-        className="p-1 rounded-full focus:outline-none focus:ring-2 focus:ring-deep-blue"
+        className="p-1 rounded-full focus:outline-none focus:ring-2 focus:ring-deep-blue hover:bg-opacity-20 hover:bg-gray-400 transition-colors"
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
