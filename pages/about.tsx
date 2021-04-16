@@ -9,6 +9,7 @@ import ProfileSnsLinks from '../components/about/ProfileSnsLinks'
 import ProfileSkills from '../components/about/ProfileSkills'
 import ProfileDescription from '../components/about/ProfileDescription'
 import ProfileCertifications from '../components/about/ProfileCertifications'
+import Button from '../components/common/buttons/BackToTopPageButton'
 
 import { getProfile } from '../hooks/about/getProfile'
 import { Profile } from '../types/ProfileType'
@@ -31,8 +32,9 @@ const About: VFC<Props> = ({ profile }) => {
           instagram={profile.instagram}
         />
         <ProfileSkills skills={profile.skills} />
-        <ProfileDescription description={profile.description}/>
-        <ProfileCertifications certifications={profile.certifications}/>
+        <ProfileDescription description={profile.description} />
+        <ProfileCertifications certifications={profile.certifications} />
+        <Button />
       </div>
     </Layout>
   )
