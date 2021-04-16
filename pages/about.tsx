@@ -8,6 +8,7 @@ import ProfileTitle from '../components/about/ProfileTitle'
 import ProfileSnsLinks from '../components/about/ProfileSnsLinks'
 import ProfileSkills from '../components/about/ProfileSkills'
 import ProfileDescription from '../components/about/ProfileDescription'
+import ProfileCertifications from '../components/about/ProfileCertifications'
 
 import { getProfile } from '../hooks/about/getProfile'
 import { Profile } from '../types/ProfileType'
@@ -31,6 +32,7 @@ const About: VFC<Props> = ({ profile }) => {
         />
         <ProfileSkills skills={profile.skills} />
         <ProfileDescription description={profile.description}/>
+        <ProfileCertifications certifications={profile.certifications}/>
       </div>
     </Layout>
   )
