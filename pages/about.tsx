@@ -7,6 +7,7 @@ import ProfileImage from '../components/about/ProfileImage'
 import ProfileTitle from '../components/about/ProfileTitle'
 import ProfileSnsLinks from '../components/about/ProfileSnsLinks'
 import ProfileSkills from '../components/about/ProfileSkills'
+import ProfileDescription from '../components/about/ProfileDescription'
 
 import { getProfile } from '../hooks/about/getProfile'
 import { Profile } from '../types/ProfileType'
@@ -29,6 +30,7 @@ const About: VFC<Props> = ({ profile }) => {
           instagram={profile.instagram}
         />
         <ProfileSkills skills={profile.skills} />
+        <ProfileDescription description={profile.description}/>
       </div>
     </Layout>
   )
