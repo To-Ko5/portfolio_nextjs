@@ -22,7 +22,12 @@ const ProfileSnsLinks: VFC<SnsLinks> = ({
       <div className="flex items-center">
         {twitter && (
           <div className="mr-6">
-            <a href={twitter} target="_blank" rel="noopener">
+            <a
+              href={twitter}
+              target="_blank"
+              rel="noopener"
+              className="text-blue-400"
+            >
               <FontAwesomeIcon icon={faTwitter} width="24px" />
             </a>
           </div>
@@ -30,7 +35,12 @@ const ProfileSnsLinks: VFC<SnsLinks> = ({
 
         {qiita && (
           <div className="mr-6">
-            <a href={qiita} target="_blank" rel="noopener">
+            <a
+              href={qiita}
+              target="_blank"
+              rel="noopener"
+              className="text-green-400"
+            >
               <FontAwesomeIcon icon={faNewspaper} width="24px" />
             </a>
           </div>
@@ -38,7 +48,12 @@ const ProfileSnsLinks: VFC<SnsLinks> = ({
 
         {github && (
           <div className="mr-6">
-            <a href={github} target="_blank" rel="noopener">
+            <a
+              href={github}
+              target="_blank"
+              rel="noopener"
+              className="text-gray-700"
+            >
               <FontAwesomeIcon icon={faGithub} width="24px" />
             </a>
           </div>
@@ -46,7 +61,12 @@ const ProfileSnsLinks: VFC<SnsLinks> = ({
 
         {instagram && (
           <div>
-            <a href={instagram} target="_blank" rel="noopener">
+            <a
+              href={instagram}
+              target="_blank"
+              rel="noopener"
+              className="text-purple-600"
+            >
               <FontAwesomeIcon icon={faInstagram} width="24px" />
             </a>
           </div>
