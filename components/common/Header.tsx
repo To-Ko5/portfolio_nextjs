@@ -1,4 +1,5 @@
 import { VFC } from 'react'
+import Link from 'next/link'
 
 import SearchForm from '../search/SearchForm'
 import SwitchingTheme from '../common/SwitchingTheme'
@@ -26,7 +27,9 @@ const Header: VFC<HEADER> = ({ toggleSidebar }) => {
             />
           </svg>
         </button>
-        <p className="text-4xl font-medium">C-Portfolio</p>
+        <p className="text-4xl font-medium">
+          <Link href="/">C-Portfolio</Link>
+        </p>
       </div>
       <div className="flex items-center">
         <div className="mr-10 hidden sm:block">
