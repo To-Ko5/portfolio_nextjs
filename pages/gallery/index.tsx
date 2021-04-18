@@ -1,8 +1,16 @@
 import { GetStaticProps } from 'next'
+
+import Layout from '../../components/layout/Layout'
+import Seo from '../../components/layout/Seo'
+
 import { getAllGalleries } from '../../hooks/gellery/getAllGalleries'
 
 const GalleryIndex = ({ tags, galleries }) => {
-  return <div></div>
+  return (
+    <Layout>
+      <Seo />
+    </Layout>
+  )
 }
 
 export default GalleryIndex
