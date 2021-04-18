@@ -9,6 +9,7 @@ const NavigationLists = () => {
         <NavigationList path="/" name="Home" />
         <NavigationList path="/category" name="Category" />
         <NavigationList path="/tag" name="Tag" />
+        <NavigationList path="/gallery" name="Gallery" />
         <NavigationList path="/about" name="About" />
         <NavigationList path="/contact" name="Contact" />
       </ul>
