@@ -36,7 +36,7 @@ export const getAllGalleries = async () => {
           name: e.fields.tag.fields.name
         },
         image: {
-          src: e.fields.image.fields.file.url,
+          src: `https:${e.fields.image.fields.file.url}`,
           alt: e.fields.image.fields.title,
           width: e.fields.image.fields.file.details.image.width,
           height: e.fields.image.fields.file.details.image.width
