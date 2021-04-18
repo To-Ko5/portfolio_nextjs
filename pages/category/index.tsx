@@ -8,11 +8,11 @@ import CategoryLinkButton from '../../components/category/CategoryLinkButton'
 import { getAllCategory } from '../../hooks/category/getAllCategory'
 import { PostCategory } from '../../types/PostType'
 
-interface Categories {
-  [index: string]: PostCategory[]
+interface Props {
+  categories: PostCategory[]
 }
 
-const categoryIndex: VFC<Categories> = ({ categories }) => {
+const categoryIndex: VFC<Props> = ({ categories }) => {
   return (
     <Layout>
       <Seo />
