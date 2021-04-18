@@ -1,11 +1,18 @@
+import { VFC } from 'react'
 import { GetStaticProps } from 'next'
 
 import Layout from '../../components/layout/Layout'
 import Seo from '../../components/layout/Seo'
 
+import { GalleryTag, Gallery } from '../../types/GalleryType'
 import { getAllGalleries } from '../../hooks/gellery/getAllGalleries'
 
-const GalleryIndex = ({ tags, galleries }) => {
+interface Props {
+  tags: GalleryTag[]
+  galleries: Gallery[]
+}
+
+const GalleryIndex: VFC<Props> = ({ tags, galleries }) => {
   return (
     <Layout>
       <Seo />

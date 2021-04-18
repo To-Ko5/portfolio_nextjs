@@ -25,14 +25,22 @@ export const getAllGalleries = async () => {
         name: e.fields.name
       }
     })
-    
+
     const galleries = response.items.map((e) => {
       return {
         id: e.sys.id,
         title: e.fields.title,
         description: e.fields.description,
-        tag: e.fields.tag,
-        image: e.fields.image
+        tag: {
+          id: e.fields.tag.sys.id,
+          name: e.fields.tag.fields.name
+        },
+        image: {
+          src: e.fields.image.fields.file.url,
+          alt: e.fields.image.fields.title,
+          width: e.fields.image.fields.file.details.image.width,
+          height: e.fields.image.fields.file.details.image.width
+        }
       }
     })
 
