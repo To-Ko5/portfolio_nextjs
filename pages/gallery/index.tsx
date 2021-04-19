@@ -1,4 +1,4 @@
-import { VFC } from 'react'
+import { useState, VFC } from 'react'
 import { GetStaticProps } from 'next'
 
 import Layout from '../../components/layout/Layout'
@@ -15,15 +15,40 @@ interface Props {
 }
 
 const GalleryIndex: VFC<Props> = ({ tags, galleries }) => {
+  const [tabMenuId, setTabMenuId] = useState('all')
+
+  const clickTabMenu = (tabId: string) => {
+    setTabMenuId(tabId)
+  }
+
   return (
     <Layout>
       <Seo />
       <div className="max-w-screen-lg mx-auto px-4">
         <h1 className="text-3xl font-medium text-center mb-8">Gallery</h1>
-        　　　　 {tags && tags.map((tag) => <GalleryTagMenu tag={tag} />)}
+        <div className="flex">
+          <div>
+            <button onClick={() => clickTabMenu('all')}>all</button>
+          </div>
+          {tags &&
+            tags.map((tag) => (
+              <GalleryTagMenu
+                key={tag.id}
+                tag={tag}
+                clickTabMenu={(id) => clickTabMenu(id)}
+              />
+            ))}
+        </div>
         <div className="grid items-center grid-cols-2 gap-4 md:grid-cols-3">
           {galleries &&
-            galleries.map((gallery) => <GalleryCard image={gallery.image} />)}
+            galleries.map((gallery) => (
+              <GalleryCard
+                key={gallery.id}
+                id={gallery.tag.id}
+                tabMenuId={tabMenuId}
+                image={gallery.image}
+              />
+            ))}
         </div>
       </div>
     </Layout>

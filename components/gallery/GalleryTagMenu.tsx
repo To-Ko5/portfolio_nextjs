@@ -1,9 +1,19 @@
 import { VFC } from 'react'
 
-import { Gallery } from '../../types/GalleryType'
+import { GalleryTag as GalleryTagType } from '../../types/GalleryType'
 
-const GalleryTag: VFC<Pick<Gallery, 'tag'>> = ({ tag }) => {
-  return <div>{tag.name}</div>
+interface Props {
+  tag: GalleryTagType
+  clickTabMenu: (key: string) => void
+}
+const GalleryTag: VFC<Props> = ({ tag, clickTabMenu }) => {
+  return (
+    <div>
+      <button onClick={() => clickTabMenu(tag.id)} className="bg-red-100">
+        {tag.name}
+      </button>
+    </div>
+  )
 }
 
 export default GalleryTag

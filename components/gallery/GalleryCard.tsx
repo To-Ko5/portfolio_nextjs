@@ -2,9 +2,24 @@ import { VFC } from 'react'
 
 import { Gallery } from '../../types/GalleryType'
 
-const GalleryCard: VFC<Pick<Gallery, 'image'>> = ({ image }) => {
+interface Props extends Pick<Gallery, 'image'> {
+  id: string
+  tabMenuId: string
+}
+
+const GalleryCard: VFC<Props> = ({ id, tabMenuId, image }) => {
+  let style
+  if (tabMenuId === 'all' || id === tabMenuId) {
+    style = {
+      display: 'block'
+    }
+  } else {
+    style = {
+      display: 'none'
+    }
+  }
   return (
-    <div>
+    <div style={style}>
       <img
         src={image.src}
         alt={image.alt}
