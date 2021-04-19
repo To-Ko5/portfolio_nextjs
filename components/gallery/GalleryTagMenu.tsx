@@ -6,7 +6,7 @@ interface Props {
   tag: GalleryTagType
   clickTabMenu: (key: string) => void
 }
-const GalleryTag: VFC<Props> = ({ tag, clickTabMenu }) => {
+const GalleryTagMenu: VFC<Props> = ({ tag, clickTabMenu }) => {
   return (
     <div>
       <button onClick={() => clickTabMenu(tag.id)} className="bg-red-100">
@@ -16,4 +16,4 @@ const GalleryTag: VFC<Props> = ({ tag, clickTabMenu }) => {
   )
 }
 
-export default GalleryTag
+export default GalleryTagMenu

@@ -15,10 +15,10 @@ interface Props {
 }
 
 const GalleryIndex: VFC<Props> = ({ tags, galleries }) => {
-  const [tabMenuId, setTabMenuId] = useState('all')
+  const [tagMenuId, setTagMenuId] = useState('all')
 
   const clickTabMenu = (tabId: string) => {
-    setTabMenuId(tabId)
+    setTagMenuId(tabId)
   }
 
   return (
@@ -45,7 +45,7 @@ const GalleryIndex: VFC<Props> = ({ tags, galleries }) => {
               <GalleryCard
                 key={gallery.id}
                 id={gallery.tag.id}
-                tabMenuId={tabMenuId}
+                tagMenuId={tagMenuId}
                 image={gallery.image}
               />
             ))}

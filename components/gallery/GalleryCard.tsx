@@ -4,12 +4,12 @@ import { Gallery } from '../../types/GalleryType'
 
 interface Props extends Pick<Gallery, 'image'> {
   id: string
-  tabMenuId: string
+  tagMenuId: string
 }
 
-const GalleryCard: VFC<Props> = ({ id, tabMenuId, image }) => {
+const GalleryCard: VFC<Props> = ({ id, tagMenuId, image }) => {
   let style
-  if (tabMenuId === 'all' || id === tabMenuId) {
+  if (tagMenuId === 'all' || id === tagMenuId) {
     style = {
       display: 'block'
     }
