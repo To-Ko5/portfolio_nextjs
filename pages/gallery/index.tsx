@@ -21,20 +21,20 @@ const GalleryIndex: VFC<Props> = ({ tags, galleries }) => {
     setTagMenuId(tabId)
   }
 
+  const tagMenus = [{ id: 'all', name: 'All' }].concat(tags)
+
   return (
     <Layout>
       <Seo />
       <div className="max-w-screen-lg mx-auto px-4">
         <h1 className="text-3xl font-medium text-center mb-8">Gallery</h1>
-        <div className="flex">
-          <div>
-            <button onClick={() => clickTabMenu('all')}>all</button>
-          </div>
-          {tags &&
-            tags.map((tag) => (
+        <div className="flex mb-4">
+          {tagMenus &&
+            tagMenus.map((tag) => (
               <GalleryTagMenu
                 key={tag.id}
                 tag={tag}
+                tagMenuId={tagMenuId}
                 clickTabMenu={(id) => clickTabMenu(id)}
               />
             ))}
