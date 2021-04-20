@@ -14,7 +14,9 @@ const ProfileCertifications: VFC<Pick<Profile, 'certifications'>> = ({
       </div>
       <ul className="ml-6 list-disc">
         {certifications &&
-          certifications.map((certification) => <li>{certification}</li>)}
+          certifications.map((certification, index) => (
+            <li key={index}>{certification}</li>
+          ))}
       </ul>
     </div>
   )
