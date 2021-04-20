@@ -5,9 +5,10 @@ import { Gallery } from '../../types/GalleryType'
 interface Props extends Pick<Gallery, 'image'> {
   id: string
   tagMenuId: string
+  toggleModal: () => void
 }
 
-const GalleryCard: VFC<Props> = ({ id, tagMenuId, image }) => {
+const GalleryCard: VFC<Props> = ({ id, tagMenuId, image, toggleModal }) => {
   let style
   if (tagMenuId === 'all' || id === tagMenuId) {
     style = {
@@ -19,7 +20,7 @@ const GalleryCard: VFC<Props> = ({ id, tagMenuId, image }) => {
     }
   }
   return (
-    <div style={style}>
+    <div style={style} onClick={toggleModal}>
       <img
         src={image.src}
         alt={image.alt}

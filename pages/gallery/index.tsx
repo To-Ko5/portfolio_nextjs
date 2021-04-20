@@ -5,6 +5,7 @@ import Layout from '../../components/layout/Layout'
 import Seo from '../../components/layout/Seo'
 import GalleryTagMenu from '../../components/gallery/GalleryTagMenu'
 import GalleryCard from '../../components/gallery/GalleryCard'
+import GalleryModal from '../../components/gallery/GalleryModal'
 
 import { GalleryTag, Gallery } from '../../types/GalleryType'
 import { getAllGalleries } from '../../hooks/gellery/getAllGalleries'
@@ -16,9 +17,14 @@ interface Props {
 
 const GalleryIndex: VFC<Props> = ({ tags, galleries }) => {
   const [tagMenuId, setTagMenuId] = useState('all')
+  const [isModal, toggleIsModal] = useState(false)
 
   const clickTabMenu = (tabId: string) => {
     setTagMenuId(tabId)
+  }
+
+  const toggleModal = (id) => {
+    toggleIsModal(!isModal)
   }
 
   const tagMenus = [{ id: 'all', name: 'All' }].concat(tags)
@@ -47,10 +53,12 @@ const GalleryIndex: VFC<Props> = ({ tags, galleries }) => {
                 id={gallery.tag.id}
                 tagMenuId={tagMenuId}
                 image={gallery.image}
+                toggleModal={() => toggleModal(gallery.id)}
               />
             ))}
         </div>
       </div>
+      {isModal && <GalleryModal toggleModal={toggleModal} />}
     </Layout>
   )
 }
