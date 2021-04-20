@@ -34,7 +34,7 @@ const GalleryIndex: VFC<Props> = ({ tags, galleries }) => {
       <Seo />
       <div className="max-w-screen-lg mx-auto px-4">
         <h1 className="text-3xl font-medium text-center mb-8">Gallery</h1>
-        <div className="flex mb-4">
+        <div className="flex mb-4 bg-gray-50 dark:bg-dark-black shadow-md">
           {tagMenus &&
             tagMenus.map((tag) => (
               <GalleryTagMenu
