@@ -18,12 +18,22 @@ interface Props {
 const GalleryIndex: VFC<Props> = ({ tags, galleries }) => {
   const [tagMenuId, setTagMenuId] = useState('all')
   const [isModal, toggleIsModal] = useState(false)
+  const [modalImage, setModalImage] = useState([])
 
   const clickTabMenu = (tabId: string) => {
     setTagMenuId(tabId)
   }
 
-  const toggleModal = (id) => {
+  const toggleModal = (id: string) => {
+    if (!id) {
+      toggleIsModal(!isModal)
+      return
+    }
+    setModalImage(
+      galleries.filter((e) => {
+        return e.id === id
+      })
+    )
     toggleIsModal(!isModal)
   }
 
@@ -58,7 +68,12 @@ const GalleryIndex: VFC<Props> = ({ tags, galleries }) => {
             ))}
         </div>
       </div>
-      {isModal && <GalleryModal toggleModal={toggleModal} />}
+      {isModal && (
+        <GalleryModal
+          modalImage={modalImage[0]}
+          toggleModal={() => toggleModal('')}
+        />
+      )}
     </Layout>
   )
 }
