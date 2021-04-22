@@ -14,13 +14,15 @@ const GalleryModal: VFC<Props> = ({ modalImage, toggleModal }) => {
       onClick={toggleModal}
     >
       <div className="px-2">
-        <img
-          src={modalImage.image.src}
-          alt={modalImage.image.alt}
-          width={modalImage.image.width}
-          height={modalImage.image.height}
-          loading="lazy"
-        />
+        <div className="max-w-5xl">
+          <img
+            src={modalImage.image.src}
+            alt={modalImage.image.alt}
+            width={modalImage.image.width}
+            height={modalImage.image.height}
+            loading="lazy"
+          />
+        </div>
       </div>
     </div>
   )
