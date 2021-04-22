@@ -10,7 +10,7 @@ interface Props {
 const GalleryModal: VFC<Props> = ({ modalImage, toggleModal }) => {
   return (
     <div
-      className="fixed z-10 top-0 bg-black bg-opacity-60 h-full w-full flex justify-center items-center"
+      className="fixed z-10 top-0 bg-black bg-opacity-80 h-full w-full flex justify-center items-center"
       onClick={toggleModal}
     >
       <div className="px-2">
