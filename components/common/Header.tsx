@@ -12,7 +12,10 @@ const Header: VFC<HEADER> = ({ toggleSidebar }) => {
   return (
     <header className="fixed w-full z-10 bg-gray-50 dark:bg-dark-black shadow-md p-4 flex justify-between">
       <div className="flex items-center">
-        <button className="w-8 mr-8 focus:outline-none" onClick={toggleSidebar}>
+        <button
+          className="w-8 mr-5 md:mr-8 focus:outline-none"
+          onClick={toggleSidebar}
+        >
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
@@ -27,7 +30,7 @@ const Header: VFC<HEADER> = ({ toggleSidebar }) => {
             />
           </svg>
         </button>
-        <p className="text-4xl font-medium">
+        <p className="text-3xl md:text-4xl font-medium">
           <Link href="/">C-Portfolio</Link>
         </p>
       </div>
