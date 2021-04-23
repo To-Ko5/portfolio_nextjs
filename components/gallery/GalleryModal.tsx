@@ -21,10 +21,11 @@ const GalleryModal: VFC<Props> = ({ modalImage, toggleModal }) => {
             width={modalImage.image.width}
             height={modalImage.image.height}
             loading="lazy"
+            style={{ maxHeight: '60vh' }}
           />
         </div>
         <div className="text-gray-100">
-          <p className="mb-2 font-semibold text-lg">{modalImage.title}</p>
+          <p className="mb-2 font-semibold md:text-lg">{modalImage.title}</p>
           <p>{modalImage.description}</p>
         </div>
       </div>
