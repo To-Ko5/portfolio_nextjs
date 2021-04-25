@@ -8,11 +8,11 @@ interface Props {
   clickTabMenu: (key: string) => void
 }
 const GalleryTagMenu: VFC<Props> = ({ tag, tagMenuId, clickTabMenu }) => {
-  const nomalStyle =
+  const normalStyle =
     'px-6 py-4 border-b-2 border-transparent focus:outline-none'
-  const activeStyle = `${nomalStyle} border-deep-blue`
+  const activeStyle = `${normalStyle} border-deep-blue`
 
-  const style = tag.id !== tagMenuId ? nomalStyle : activeStyle
+  const style = tag.id !== tagMenuId ? normalStyle : activeStyle
 
   return (
     <div>
