@@ -3,7 +3,7 @@ const BackToTopPageButton = () => {
   return (
     <div className="mt-16">
       <Link href="/">
-        <a className="p-2 border border-gray-400 rounded text-gray-400">
+        <a className="p-2 border border-gray-400 rounded text-gray-400 hover:bg-opacity-20 hover:bg-gray-400 transition-colors">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             className="4-5 w-4 mr-1 mb-1 inline"
