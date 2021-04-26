@@ -1,7 +1,7 @@
-import { FC } from 'react'
+import { VFC } from 'react'
 import Head from 'next/head'
 
-interface METADATA {
+interface MetaData {
   pageTitle?: string
   pageDescription?: string
   pagePath?: string
@@ -10,22 +10,23 @@ interface METADATA {
   pageImgHeight?: number
 }
 
-const Seo: FC<METADATA> = (props) => {
+const Seo: VFC<MetaData> = ({
+  pageTitle,
+  pageDescription,
+  pagePath,
+  pageImg,
+  pageImgWidth,
+  pageImgHeight
+}) => {
   const defaultTitle = 'C-Portfolio'
+  const defaultDescription = 'C-Portfolio Site'
 
-  const title = props.pageTitle
-    ? `${props.pageTitle} | ${defaultTitle}`
-    : defaultTitle
-
-  const description = props.pageDescription
-
-  const url = props.pagePath
-
-  const imgUrl = props.pageImg
-
-  const imgWidth = props.pageImgWidth || 1280
-
-  const imgHeight = props.pageImgHeight || 640
+  const title = pageTitle ? `${pageTitle} | ${defaultTitle}` : defaultTitle
+  const description = pageDescription ? pageDescription : defaultDescription
+  const url = pagePath
+  const imgUrl = pageImg
+  const imgWidth = pageImgWidth || 1280
+  const imgHeight = pageImgHeight || 640
 
   return (
     <Head>
