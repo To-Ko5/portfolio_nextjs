@@ -21,7 +21,7 @@ interface Props {
 const About: VFC<Props> = ({ profile }) => {
   return (
     <Layout>
-      <Seo />
+      <Seo pageTitle={'About'} />
       <div className="max-w-2xl mx-auto px-4">
         <ProfileImage image={profile.image} />
         <ProfileTitle name={profile.name} job={profile.job} />

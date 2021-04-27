@@ -15,7 +15,7 @@ interface Props {
 const categoryIndex: VFC<Props> = ({ categories }) => {
   return (
     <Layout>
-      <Seo />
+      <Seo pageTitle={'Category'} />
       <div className="max-w-screen-lg mx-auto px-4">
         <h1 className="text-3xl font-medium text-center mb-8">Category</h1>
         <div className="grid grid-cols-2 gap-4 md:grid-cols-3">
