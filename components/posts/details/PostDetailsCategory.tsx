@@ -8,7 +8,7 @@ const PostDetailsCategory: VFC<Pick<PostDetails, 'category'>> = ({
   return (
     <div className="flex mb-4">
       <Link href="/category">
-        <a className="flex items-center mr-4 px-1 text-xs border border-gray-400 rounded text-gray-400">
+        <a className="flex items-center mr-4 px-1 text-xs border border-gray-400 rounded text-gray-400 hover:bg-opacity-20 hover:bg-gray-400 dark:hover:bg-opacity-20 dark:hover:bg-gray-400 transition-colors">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             className="4-5 w-4 mr-0.5"
@@ -26,7 +26,7 @@ const PostDetailsCategory: VFC<Pick<PostDetails, 'category'>> = ({
       </Link>
       <div>
         <Link href={`/category/${category.id}`}>
-          <a className="px-2 py-1 dark:bg-dark-black rounded shadow text-sm">
+          <a className="px-2 py-1 dark:bg-dark-black rounded shadow text-sm hover:bg-opacity-20 hover:bg-gray-400 dark:hover:bg-opacity-20 dark:hover:bg-gray-400 transition-colors">
             {category.name}
           </a>
         </Link>

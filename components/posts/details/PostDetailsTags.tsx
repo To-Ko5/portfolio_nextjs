@@ -6,7 +6,7 @@ const PostDetailsTags: VFC<Pick<PostDetails, 'tags'>> = ({ tags }) => {
   return (
     <div className="flex mb-8">
       <Link href="/tag">
-        <a className="flex items-center mr-4 px-1 text-xs border border-gray-400 rounded text-gray-400">
+        <a className="flex items-center mr-4 px-1 text-xs border border-gray-400 rounded text-gray-400 hover:bg-opacity-20 hover:bg-gray-400 dark:hover:bg-opacity-20 dark:hover:bg-gray-400 transition-colors">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             className="4-5 w-4 mr-0.5"
@@ -27,7 +27,7 @@ const PostDetailsTags: VFC<Pick<PostDetails, 'tags'>> = ({ tags }) => {
           tags.map((tag) => (
             <div key={tag.id}>
               <Link href={`/tag/${tag.id}`}>
-                <a className="px-2 py-1 mr-1 dark:bg-dark-black rounded shadow text-sm">
+                <a className="px-2 py-1 mr-1 dark:bg-dark-black rounded shadow text-sm hover:bg-opacity-20 hover:bg-gray-400 dark:hover:bg-opacity-20 dark:hover:bg-gray-400 transition-colors">
                   # {tag.name}
                 </a>
               </Link>
