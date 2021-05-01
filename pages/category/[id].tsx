@@ -12,18 +12,22 @@ const Category = ({ posts }) => {
   const postData = posts.items
 
   // titleを取得
-  const categoryTitle = postData.map((post, index) => {
-    if (index === 0) {
-      return post.fields.category.fields.name
-    }
-  })
+  const categoryTitle = postData
+    .map((post, index) => {
+      if (index === 0) {
+        return post.fields.category.fields.name
+      }
+    })
+    .filter((tag) => {
+      return tag !== undefined
+    })
 
   return (
     <Layout>
-      <Seo />
+      <Seo pageTitle={categoryTitle[0]} />
       <div className="max-w-screen-lg mx-auto px-4">
         <h1 className="text-3xl font-medium text-center mb-8">
-          {categoryTitle}
+          {categoryTitle[0]}
         </h1>
         <div className="grid gap-4 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
           {postData &&

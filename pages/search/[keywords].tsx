@@ -12,7 +12,7 @@ const SearchKeywords = ({ posts, title }) => {
 
   return (
     <Layout>
-      <Seo />
+      <Seo pageTitle={title} />
       <div className="max-w-screen-lg mx-auto px-4">
         <h1 className="text-3xl font-medium text-center mb-8">{title}</h1>
         <div className="grid gap-4 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
