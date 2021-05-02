@@ -1,7 +1,8 @@
-import { VFC } from 'react'
+import { VFC, useState } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 
+import TagsList from '../tag/TagsList'
 import { PostFields } from '../../types/PostFieldsType'
 import {
   PostImage,
@@ -39,8 +40,18 @@ const PostCard: VFC<Props> = ({ id, post }) => {
     tags.push({ id: e.sys.id, name: e.fields.name })
   })
 
+  const [isTagsList, setIsTagsList] = useState(false)
+
+  const tabButtonMouseOver = () => {
+    setIsTagsList(true)
+  }
+
+  const tabButtonMouseOut = () => {
+    setIsTagsList(false)
+  }
+
   return (
-    <div className="bg-gray-50 dark:bg-dark2-black rounded overflow-hidden shadow-md">
+    <div className="bg-gray-50 dark:bg-dark2-black rounded shadow-md">
       <div className={ImageStyle.image}>
         <Image
           src={image.src}
@@ -83,8 +94,8 @@ const PostCard: VFC<Props> = ({ id, post }) => {
             </div>
           </div>
         </div>
-        <div>
-          <div className="flex mb-4">
+        <div onMouseLeave={tabButtonMouseOut}>
+          <div className="inline-flex mb-4 relative">
             <Link href="/tag">
               <a className="flex items-center px-1 text-xs border border-gray-400 rounded text-gray-400 hover:bg-opacity-20 hover:bg-gray-400 dark:hover:bg-opacity-20 dark:hover:bg-gray-400 transition-colors">
                 <svg
@@ -103,7 +114,10 @@ const PostCard: VFC<Props> = ({ id, post }) => {
               </a>
             </Link>
             <div>
-              <button className="h-full px-2 ml-4 dark:bg-dark-black rounded shadow text-sm hover:bg-opacity-20 hover:bg-gray-400 dark:hover:bg-opacity-20 dark:hover:bg-gray-400 transition-colors">
+              <button
+                className="h-full px-2 ml-4 dark:bg-dark-black rounded shadow text-sm hover:bg-opacity-20 hover:bg-gray-400 dark:hover:bg-opacity-20 dark:hover:bg-gray-400 transition-colors"
+                onMouseOver={tabButtonMouseOver}
+              >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   className="h-4 w-4 inline"
@@ -120,15 +134,16 @@ const PostCard: VFC<Props> = ({ id, post }) => {
                 </svg>
               </button>
             </div>
+            {isTagsList && <TagsList tags={tags} />}
           </div>
-        </div>
 
-        <div className="absolute bottom-5 right-3">
-          <Link href={`/work/${id}`}>
-            <a className="border border-deep-blue text-deep-blue rounded p-2 hover:bg-opacity-20 hover:bg-deep-blue transition-colors">
-              READ MORE
-            </a>
-          </Link>
+          <div className="absolute bottom-5 right-3">
+            <Link href={`/work/${id}`}>
+              <a className="border border-deep-blue text-deep-blue rounded p-2 hover:bg-opacity-20 hover:bg-deep-blue transition-colors">
+                READ MORE
+              </a>
+            </Link>
+          </div>
         </div>
       </div>
     </div>
