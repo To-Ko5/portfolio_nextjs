@@ -1,5 +1,5 @@
 import { VFC } from 'react'
-import Link from 'next/link'
+import ActiveLink from '../ActiveLink'
 
 interface NavigationList {
   path: string
@@ -9,11 +9,11 @@ interface NavigationList {
 const NavigationList: VFC<NavigationList> = ({ path, name }) => {
   return (
     <li>
-      <Link href={path}>
+      <ActiveLink href={path} activeClassName="bg-opacity-20 bg-gray-400">
         <a className="block p-2 hover:bg-opacity-20 hover:bg-gray-400 rounded transition-colors">
           {name}
         </a>
-      </Link>
+      </ActiveLink>
     </li>
   )
 }
