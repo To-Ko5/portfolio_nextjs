@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react'
+import 'scroll-behavior-polyfill'
 
 const ReturnTopButton = () => {
   const [isButtonActive, setIsButtonActive] = useState(false)
