@@ -19,6 +19,7 @@ const GalleryCard: VFC<Props> = ({ id, tagMenuId, image, toggleModal }) => {
       display: 'none'
     }
   }
+
   return (
     <div style={style} onClick={toggleModal}>
       <img
@@ -27,6 +28,7 @@ const GalleryCard: VFC<Props> = ({ id, tagMenuId, image, toggleModal }) => {
         width={image.width}
         height={image.height}
         loading="lazy"
+        className="bg-opacity-20 bg-gray-400"
       />
     </div>
   )

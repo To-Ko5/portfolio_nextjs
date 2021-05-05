@@ -13,6 +13,7 @@ const ProfileImage: VFC<Pick<Profile, 'image'>> = ({ image }) => {
         height={image.height}
         loading="lazy"
         objectFit="contain"
+        className="bg-opacity-20 bg-gray-400"
       />
     </div>
   )
