@@ -26,6 +26,9 @@ const SearchForm = () => {
     searchInput.blur()
   }
 
+  const activeStyle = { color: '#1976d2' }
+  const style = keywords ? activeStyle : { color: 'inherit' }
+
   return (
     <div className="relative">
       <form className="flex items-center" onSubmit={search}>
@@ -41,6 +44,7 @@ const SearchForm = () => {
         <button
           id="search_button"
           className="p-1 rounded-full focus:outline-none focus:ring-2 focus:ring-deep-blue hover:bg-opacity-20 hover:bg-gray-400 transition-colors"
+          style={style}
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
