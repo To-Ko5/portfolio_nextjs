@@ -23,7 +23,7 @@ const SwitchingTheme = () => {
         <span>
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            className="w-8"
+            className="w-6 sm:w-8"
             fill="none"
             viewBox="0 0 24 24"
             stroke="currentColor"
@@ -40,7 +40,7 @@ const SwitchingTheme = () => {
         <span>
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            className="w-8"
+            className="w-6 sm:w-8"
             fill="none"
             viewBox="0 0 24 24"
             stroke="currentColor"
