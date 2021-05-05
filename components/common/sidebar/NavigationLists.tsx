@@ -9,7 +9,16 @@ const NavigationLists = () => {
         <NavigationList path="/tag" name="Tag" />
         <NavigationList path="/gallery" name="Gallery" />
         <NavigationList path="/about" name="About" />
-        <NavigationList path="/contact" name="Contact" />
+        <li>
+          <a
+            href={process.env.NEXT_PUBLIC_PORTFOLIO_CONTACT_URL}
+            target="_blank"
+            rel="noopener"
+            className="block p-2 hover:bg-opacity-20 hover:bg-gray-400 rounded transition-colors"
+          >
+            Contact
+          </a>
+        </li>
       </ul>
     </nav>
   )
