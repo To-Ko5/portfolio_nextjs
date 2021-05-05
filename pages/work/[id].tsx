@@ -23,7 +23,13 @@ interface Props {
 const Work: VFC<Props> = ({ post }) => {
   return (
     <Layout>
-      <Seo />
+      <Seo
+        pageTitle={post.title}
+        pageDescription={post.subTitle}
+        pageImg={post.image.src}
+        pageImgWidth={post.image.width}
+        pageImgHeight={post.image.height}
+      />
       <div className="max-w-screen-lg mx-auto px-4">
         <PostDetailsImage image={post.image} />
         <PostDetailsTitle title={post.title} subTitle={post.subTitle} />
