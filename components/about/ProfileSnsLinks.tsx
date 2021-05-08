@@ -18,15 +18,15 @@ const ProfileSnsLinks: VFC<SnsLinks> = ({
   instagram
 }) => {
   return (
-    <div className="mb-10">
+    <div className="mb-10 -ml-2">
       <div className="flex items-center">
         {twitter && (
-          <div className="mr-6">
+          <div className="mr-2">
             <a
               href={twitter}
               target="_blank"
               rel="noopener"
-              className="text-blue-400"
+              className="block text-blue-400 p-2 rounded-full hover:bg-opacity-20 hover:bg-blue-400 transition-colors"
             >
               <FontAwesomeIcon icon={faTwitter} width="24px" />
             </a>
@@ -34,12 +34,12 @@ const ProfileSnsLinks: VFC<SnsLinks> = ({
         )}
 
         {qiita && (
-          <div className="mr-6">
+          <div className="mr-2">
             <a
               href={qiita}
               target="_blank"
               rel="noopener"
-              className="text-green-400"
+              className="block text-green-400 p-2 rounded-full hover:bg-opacity-20 hover:bg-green-400 transition-colors"
             >
               <FontAwesomeIcon icon={faNewspaper} width="24px" />
             </a>
@@ -47,12 +47,12 @@ const ProfileSnsLinks: VFC<SnsLinks> = ({
         )}
 
         {github && (
-          <div className="mr-6">
+          <div className="mr-2">
             <a
               href={github}
               target="_blank"
               rel="noopener"
-              className="text-gray-700"
+              className="block text-gray-700 p-2 rounded-full hover:bg-opacity-20 hover:bg-gray-700 transition-colors"
             >
               <FontAwesomeIcon icon={faGithub} width="24px" />
             </a>
@@ -65,7 +65,7 @@ const ProfileSnsLinks: VFC<SnsLinks> = ({
               href={instagram}
               target="_blank"
               rel="noopener"
-              className="text-purple-600"
+              className="block text-purple-600  p-2 rounded-full hover:bg-opacity-20 hover:bg-purple-600 transition-colors"
             >
               <FontAwesomeIcon icon={faInstagram} width="24px" />
             </a>
