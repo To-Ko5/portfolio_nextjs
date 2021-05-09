@@ -18,8 +18,8 @@ const Category = ({ posts }) => {
         return post.fields.category.fields.name
       }
     })
-    .filter((tag) => {
-      return tag !== undefined
+    .filter((category) => {
+      return category !== undefined
     })
 
   return (
