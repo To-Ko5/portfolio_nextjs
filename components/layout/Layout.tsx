@@ -14,15 +14,14 @@ const Layout: FC = ({ children }) => {
   }
 
   return (
-    <React.Fragment>
+    <>
       <Header toggleSidebar={toggleSidebar} />
-
       <Sidebar isSidebar={isSidebar} />
       <SidebarOverlay isSidebar={isSidebar} toggleSidebar={toggleSidebar} />
       <main className="py-28 min-h-screen">{children}</main>
       <ReturnTopButton />
       <Footer />
-    </React.Fragment>
+    </>
   )
 }
 
