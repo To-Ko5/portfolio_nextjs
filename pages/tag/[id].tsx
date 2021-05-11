@@ -1,5 +1,6 @@
 import { GetStaticPaths, GetStaticProps } from 'next'
 import { useRouter } from 'next/router'
+import Link from 'next/link'
 
 import Layout from '../../components/layout/Layout'
 import Seo from '../../components/layout/Seo'
@@ -30,7 +31,14 @@ const Tag = ({ posts }) => {
     <Layout>
       <Seo pageTitle={tagTitle[0]} />
       <div className="max-w-screen-lg mx-auto px-4">
-        <h1 className="text-3xl font-medium text-center mb-8">{tagTitle[0]}</h1>
+        <div className="text-center mb-8">
+          <Link href="/tag">
+            <a className="p-2 text-xs border border-gray-400 rounded text-gray-400 hover:bg-opacity-20 hover:bg-gray-400 dark:hover:bg-opacity-20 dark:hover:bg-gray-400 transition-colors">
+              TAG
+            </a>
+          </Link>
+          <h1 className="text-3xl font-medium mt-4">{tagTitle[0]}</h1>
+        </div>
         <div className="grid gap-4 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
           {postData &&
             postData.map((post) => (
