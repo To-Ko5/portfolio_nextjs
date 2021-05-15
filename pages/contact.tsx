@@ -6,6 +6,7 @@ const contact = () => {
     <Layout>
       <Seo pageTitle={'Contact'} />
       <div className="max-w-2xl mx-auto px-4">
+        <h1 className="text-3xl font-medium text-center mb-16">Contact</h1>
         <div className="text-center">
           <a
             href={process.env.NEXT_PUBLIC_PORTFOLIO_CONTACT_URL}
