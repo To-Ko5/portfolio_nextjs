@@ -139,7 +139,7 @@ const PostCard: VFC<Props> = ({ id, post }) => {
 
           <div className="absolute bottom-5 right-3">
             <Link href={`/work/${id}`}>
-              <a className="border border-deep-blue text-deep-blue rounded p-2 hover:bg-opacity-20 hover:bg-deep-blue transition-colors">
+              <a className="border border-deep-blue text-deep-blue font-medium rounded p-2 hover:bg-opacity-20 hover:bg-deep-blue transition-colors">
                 READ MORE
               </a>
             </Link>
