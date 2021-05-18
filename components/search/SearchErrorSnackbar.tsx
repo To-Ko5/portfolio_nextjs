@@ -14,11 +14,13 @@ const SearchErrorSnackbar: VFC<Props> = ({ toggleSnackbar }) => {
 
   return (
     <div
-      className="px-2 py-1 bg-gray-100 dark:bg-dark-black rounded shadow text-sm cursor-pointer"
+      className="w-4/5 px-2 py-1 bg-gray-100 dark:bg-dark-black rounded shadow text-sm text-center cursor-pointer"
       style={style}
       onClick={() => toggleSnackbar(false)}
     >
-      <span className="text-red-500 font-semibold">Required Entry</span>
+      <span className="text-red-500 font-semibold">
+        検索ワードを入力ください
+      </span>
     </div>
   )
 }
