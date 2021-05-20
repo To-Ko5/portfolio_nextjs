@@ -7,7 +7,7 @@ Next.js・Contentful で制作したポートフォリオサイトです。
 ## 使用技術
 
 - フロントエンド:Next.js
-- UI フレームワーク:Vuetify
+- UI フレームワーク:Tailwind CSS
 - CMS:Contentful
 - ホスティング:Vercel
 
