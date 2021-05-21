@@ -115,7 +115,7 @@ const PostCard: VFC<Props> = ({ id, post }) => {
             </Link>
             <div>
               <button
-                className="h-full px-2 ml-4 dark:bg-dark-black rounded shadow text-sm hover:bg-opacity-20 hover:bg-gray-400 dark:hover:bg-opacity-20 dark:hover:bg-gray-400 transition-colors"
+                className="h-full px-2 ml-4 dark:bg-dark-black rounded shadow text-sm focus:outline-none hover:bg-opacity-20 hover:bg-gray-400 dark:hover:bg-opacity-20 dark:hover:bg-gray-400 transition-colors"
                 onMouseOver={tabButtonMouseOver}
               >
                 <svg
