@@ -11,7 +11,7 @@ const TagsList: VFC<{ tags: PostTag[] }> = ({ tags }) => {
   }
   return (
     <div
-      className="absolute z-20 rounded bg-gray-50 dark:bg-dark-black py-2 shadow-xl"
+      className="absolute z-20 rounded bg-gray-50 dark:bg-dark-black py-2 shadow-2xl"
       style={style}
     >
       {tags &&
