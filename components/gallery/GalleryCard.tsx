@@ -28,7 +28,7 @@ const GalleryCard: VFC<Props> = ({ id, tagMenuId, image, toggleModal }) => {
         width={image.width}
         height={image.height}
         loading="lazy"
-        className="bg-opacity-20 bg-gray-400"
+        className="bg-opacity-20 bg-gray-400 cursor-pointer"
       />
     </div>
   )
