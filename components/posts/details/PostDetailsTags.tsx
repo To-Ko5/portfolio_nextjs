@@ -22,13 +22,13 @@ const PostDetailsTags: VFC<Pick<PostDetails, 'tags'>> = ({ tags }) => {
           TAG
         </a>
       </Link>
-      <div className="flex">
+      <div className="flex overflow-x-scroll">
         {tags &&
           tags.map((tag) => (
             <div key={tag.id}>
               <Link href={`/tag/${tag.id}`}>
                 <a className="px-2 py-1 mr-1 dark:bg-dark-black rounded shadow text-sm hover:bg-opacity-20 hover:bg-gray-400 dark:hover:bg-opacity-20 dark:hover:bg-gray-400 transition-colors">
-                  # {tag.name}
+                  #{tag.name}
                 </a>
               </Link>
             </div>
