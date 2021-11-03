@@ -4,9 +4,9 @@ import { PostDetails } from '../../../types/PostDetailsType'
 
 const PostDetailsTags: VFC<Pick<PostDetails, 'tags'>> = ({ tags }) => {
   return (
-    <div className="flex mb-8">
+    <div className="flex mb-8 items-center">
       <Link href="/tag">
-        <a className="flex items-center mr-4 px-1 text-xs border border-gray-400 rounded text-gray-400 hover:bg-opacity-20 hover:bg-gray-400 dark:hover:bg-opacity-20 dark:hover:bg-gray-400 transition-colors">
+        <a className="flex items-center mr-4 px-1 py-1 text-xs border border-gray-400 rounded text-gray-400 hover:bg-opacity-20 hover:bg-gray-400 dark:hover:bg-opacity-20 dark:hover:bg-gray-400 transition-colors">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             className="4-5 w-4 mr-0.5"
@@ -22,7 +22,7 @@ const PostDetailsTags: VFC<Pick<PostDetails, 'tags'>> = ({ tags }) => {
           TAG
         </a>
       </Link>
-      <div className="flex overflow-x-scroll">
+      <div className="flex overflow-x-auto py-1">
         {tags &&
           tags.map((tag) => (
             <div key={tag.id}>
